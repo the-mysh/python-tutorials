@@ -1,7 +1,3 @@
-"""Given two vectors of length n that are represented with one-dimensional arrays, compose a code fragment
-that computes the Euclidean distance between them
-(the square root of the sum of the squares of the differences between corresponding elements)."""
-
 import math   # we'll be using sqrt function from math; imports should be defined at the top of the script
 
 
