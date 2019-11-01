@@ -78,4 +78,11 @@ for a_number in all_numbers:
     else:
         the_outliers.append(a_number)
 
-print(f"\nNumbers close enough to the mean: {the_good_ones}; outliers: {the_outliers}")
+print(f"\nNumbers close enough to the mean: {the_good_ones}; outliers: {the_outliers}\n")
+
+# Alternatively, instead of using the lower and upper boundary, you could calculate the actual distance for every number
+# and check whether it's bigger than the max distance
+for a_number in all_numbers:
+    actual_distance = abs(a_number - mean_of_the_numbers)  # we are interested in both too low and too high numbers
+    if actual_distance > distance:  # 'distance' was the 1.5*std
+        print(f"Outlier: {a_number}")
