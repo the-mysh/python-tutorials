@@ -1,4 +1,6 @@
 import random
+import numpy as np
+import matplotlib.pyplot as plt
 
 # part a
 
@@ -25,9 +27,29 @@ cumsum_list[0] = random_list[0]
 # from the second element onwards, the sum at position i is the original i-th element (random_list[i])
 # plus sum of all the previous elements
 # which we have actually stored in the cum-sum list - at position i-1 (cumsum_list[i-1])
-for i in range(n):
+# we start from element of index 1 - we have already got the one at 0
+for i in range(1, n):
     cumsum_list[i] = random_list[i] + cumsum_list[i-1]
 
 print(f"First 10 numbers of the cum-sum list: {cumsum_list[:10]}")
 
-# tbc.
+# part b: saving to txt file
+np.savetxt('s-values.txt', cumsum_list)
+
+# part c: cum-sum of cum-sums
+variates_list = n*[0.]
+variates_list[0] = cumsum_list[0]
+
+for i in range(1, n):
+    variates_list[i] = cumsum_list[i] + variates_list[i-1]
+
+np.savetxt('t-values.txt', variates_list)
+
+# part d: display
+plt.figure("Random walk")  # if the plot opens in a new window, the window name (top bar) will be 'Random walk'
+plt.plot(cumsum_list, variates_list)
+plt.grid(color='lightgray')
+plt.xlabel("S values")
+plt.ylabel("T values")
+plt.title("Random walk: s and t values")  # title for the plot, displayed just above the plot 'box'
+plt.show()  # without this line, the plot will not be displayed
