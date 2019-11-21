@@ -1,7 +1,7 @@
 # CS1028 Python tutorials
 This repository contains solutions to some of the tutorial questions
 for CS1028 course at the University of Aberdeen, fall 2019/20.
-The tutorial questions have been prepared by the lecturer, dr Robert Duncan.
+The tutorial questions have been prepared by the lecturers, dr Robert Duncan and dr Daniel Vogel.
 
 It also provides code samples with extensive explanations.
 These concern some of the basic concepts in Python and programming in general.
@@ -9,7 +9,7 @@ They are meant to address some of the most frequently occurring issues.
 
 ## Using the repository
 Producing well-described solutions takes time.
-Seemingly the most difficult questions will be prioritised.
+The most difficult questions will be prioritised.
 
 You are encouraged to submit requests for solutions to specific questions
 using the issue tracker (https://github.com/animaviridis/python-tutorials/issues).
